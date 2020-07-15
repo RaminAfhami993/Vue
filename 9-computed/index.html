@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="mainApp">
+        <div>a: {{ a }}</div>
+        <div>b: {{ b }}</div>
+        <div>age: {{ age }}</div>
+        <button @click="adda">add a</button>
+        <button @click="addb">add b</button>
+
+        <!-- <div>methods</div>
+        <div>a + age: {{ addAToAgeT() }}</div>
+        <div>b + age: {{ addBToAgeT() }}</div> -->
+
+        <div>computed</div>
+        <div>a + age: {{ addAToAgeC }}</div>
+        <div>b + age: {{ addBToAgeC }}</div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
