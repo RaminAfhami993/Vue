@@ -4,6 +4,8 @@ import VueResource from 'vue-resource'
 
 Vue.use(VueResource);
 
+
+// directives
 Vue.directive('rainbow', {
   bind(element, binding, vnode) {
     element.style.color = '#' + Math.random().toString().slice(2, 8)
@@ -23,7 +25,17 @@ Vue.directive('theme', {
       el.style.background ="#ddd"
     }
   }
-})
+});
+
+// filters
+Vue.filter('to-uppercase', function(value) {
+  return value.toUpperCase();
+});
+
+Vue.filter('snipped', function(value) {
+  return value.slice(0, 100) + "...";
+});
+
 
 new Vue({
   el: '#app',
