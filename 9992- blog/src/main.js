@@ -6,11 +6,11 @@ Vue.use(VueResource);
 
 
 // directives
-Vue.directive('rainbow', {
-  bind(element, binding, vnode) {
-    element.style.color = '#' + Math.random().toString().slice(2, 8)
-  }
-});
+// Vue.directive('rainbow', {
+//   bind(element, binding, vnode) {
+//     element.style.color = '#' + Math.random().toString().slice(2, 8)
+//   }
+// });
 
 Vue.directive('theme', {
   bind(el, binding, vnode) {
@@ -27,10 +27,10 @@ Vue.directive('theme', {
   }
 });
 
-// filters
-Vue.filter('to-uppercase', function(value) {
-  return value.toUpperCase();
-});
+// filters // global
+// Vue.filter('to-uppercase', function(value) {
+//   return value.toUpperCase();
+// });
 
 Vue.filter('snipped', function(value) {
   return value.slice(0, 100) + "...";
