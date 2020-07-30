@@ -10,6 +10,9 @@
 </template>
 
 <script>
+
+import MixinSearch from "../mixins/searchMixin";
+
 export default {
     data () {
         return {
@@ -20,11 +23,7 @@ export default {
     methods: {
     },
     computed: {
-        filterdBlogs() {
-            return this.blogs.filter(blog => {
-                return blog.title.match(this.search)
-            })
-        }
+
     },
     created() {
         this.$http.get('http://jsonplaceholder.typicode.com/posts').then(function(data){
@@ -43,7 +42,8 @@ export default {
                 element.style.color = '#' + Math.random().toString().slice(2, 8)
             }
         }
-    }
+    },
+    mixins: [MixinSearch]
 }
 </script>
 
